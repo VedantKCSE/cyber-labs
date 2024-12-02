@@ -1,0 +1,100 @@
+/* Glitch Text Effect */
+@keyframes glitch-text {
+    0% {
+      transform: translate(0);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    5% {
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    }
+    10% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    15% {
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    }
+    20% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  
+  /* Pulse Animation for Buttons and Alerts */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Floating Animation for Header */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Terminal-like Cursor Effect */
+  @keyframes blink-cursor {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  /* Global Styles */
+  .App {
+    overflow-x: hidden;
+  }
+  
+  /* Animated Header */
+  h2 {
+    animation: glitch-text 2s infinite linear alternate;
+    position: relative;
+  }
+  
+  /* Button Animations */
+  .MuiButton-outlined {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .MuiButton-outlined:hover {
+    animation: pulse 0.5s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  }
+  
+  /* Text Field Glow */
+  .MuiOutlinedInput-root {
+    transition: all 0.3s ease;
+  }
+  
+  .MuiOutlinedInput-root:focus-within {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  }
+  
+  /* Alert/Toast Animations */
+  .MuiAlert-root {
+    animation: pulse 0.5s ease;
+  }
+  
+  /* Cursor Effect for Subtitle */
+  .subtitle-cursor::after {
+    content: '|';
+    animation: blink-cursor 0.7s infinite;
+    margin-left: 3px;
+    color: #00ff00;
+  }

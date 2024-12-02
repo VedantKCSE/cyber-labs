@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import db from "./firebaseConfig";
+import React, { useState, useEffect } from "react";
+import db from "./components/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import "./App.css";
-import MatrixRain from "./MatrixRain";
+import "./animation.css"; // Add the new animations CSS
+import MatrixRain from "./components/MatrixRain";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import TextField from "@mui/material/TextField";
@@ -32,6 +33,26 @@ const theme = createTheme({
 function App() {
   const [email, setEmail] = useState("");
   const [toast, setToast] = useState({ open: false, message: "", severity: "success" });
+  const [typedSubtitle, setTypedSubtitle] = useState("");
+
+  // Typing effect for subtitle
+  useEffect(() => {
+    const subtitle = "Stay updated with the latest in cybersecurity and hacking!";
+    let currentText = "";
+    let index = 0;
+
+    const typingEffect = setInterval(() => {
+      if (index < subtitle.length) {
+        currentText += subtitle[index];
+        setTypedSubtitle(currentText);
+        index++;
+      } else {
+        clearInterval(typingEffect);
+      }
+    }, 50);
+
+    return () => clearInterval(typingEffect);
+  }, []);
 
   const handleToastClose = () => {
     setToast({ ...toast, open: false });
@@ -67,13 +88,13 @@ function App() {
           <Typography variant="h2" component="h2" gutterBottom>
             Cyber Labs Newsletter
           </Typography>
-          <Typography variant="body1" paragraph>
-            Stay updated with the latest in cybersecurity and hacking!
+          <Typography variant="body1" paragraph className="subtitle-cursor">
+            {typedSubtitle}
           </Typography>
 
           {/* Social Proof and Urgency */}
           <Typography variant="body2" color="primary" style={{ marginBottom: "20px" }}>
-            Join <strong>5000+ subscribers</strong> to stay ahead in cybersecurity! Only a few spots left for this month.
+            Join <strong className="social-proof-item">5000+ subscribers</strong> to stay ahead in cybersecurity! Only a few spots left for this month.
           </Typography>
 
           <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
@@ -86,7 +107,7 @@ function App() {
               color="primary"
               style={{ backgroundColor: "#111", color: "#00ff00", borderColor: "#00ff00" }}
             />
-            <Button type="submit" variant="contained" color="primary" size="large">
+            <Button type="submit" variant="outlined" color="primary" size="large">
               Subscribe
             </Button>
           </form>
@@ -94,17 +115,17 @@ function App() {
           {/* Trust Signals */}
           <Grid container spacing={2} justifyContent="center" style={{ marginTop: "40px" }}>
             <Grid item>
-              <Typography variant="body2">
+              <Typography variant="body2" className="social-proof-item">
                 <strong>✔️ Trusted by professionals</strong>
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body2">
+              <Typography variant="body2" className="social-proof-item">
                 <strong>✔️ Endorsed by leading platforms</strong>
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body2">
+              <Typography variant="body2" className="social-proof-item">
                 <strong>✔️ Exclusive cybersecurity insights</strong>
               </Typography>
             </Grid>
