@@ -1,0 +1,18 @@
+/* src/MatrixRain.css */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps it behind other elements */
+    filter: blur(6px); /* Adds a subtle blur effect */
+  }
+  
+  /* Optional: Smooth fading background */
+  body {
+    background: linear-gradient(to bottom, #000, #002200);
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+  }
+  

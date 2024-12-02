@@ -1,70 +1,30 @@
-/* src/App.css */
 body {
   margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "IBM Plex Mono", monospace; /* Body font */
   background-color: #000;
   color: #0f0;
+  overflow: hidden;
 }
 
-.App {
-  text-align: center;
-  padding: 20px;
+h1, h2, h3 {
+  font-family: "Orbitron", sans-serif; /* Headline font */
+  text-transform: uppercase; /* Optional for a techy look */
 }
 
-.App-header {
-  margin-top: 10%;
-  animation: flicker 1.5s infinite alternate;
-}
-
-h1 {
+.App-header h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  letter-spacing: 2px; /* Adds a cyber feel */
 }
 
-p {
-  font-size: 1.2rem;
-}
-
-form {
-  margin-top: 20px;
-}
-
-input[type="email"] {
-  padding: 10px;
-  font-size: 1rem;
-  margin-right: 10px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
+p, form, input, button {
+  font-family: "IBM Plex Mono", monospace;
 }
 
 button {
-  padding: 10px 20px;
+  font-weight: 500; /* Slightly bold for buttons */
+}
+
+footer {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1rem;
-  color: #000;
-  background-color: #0f0;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #0c0;
-}
-
-.message {
-  margin-top: 20px;
-  font-size: 1rem;
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
 }
