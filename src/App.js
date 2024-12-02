@@ -61,7 +61,10 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, "newsletter"), { email });
+      await addDoc(collection(db, "newsletter"), { 
+        email, 
+        date: new Date() // Add the current date and time
+      });
       setToast({ open: true, message: "🎉 Email successfully added!", severity: "success" });
       setEmail("");
     } catch (error) {
@@ -69,6 +72,7 @@ function App() {
       setToast({ open: true, message: "⚠️ Failed to add email. Please try again.", severity: "error" });
     }
   };
+  
 
   return (
     <ThemeProvider theme={theme}>
