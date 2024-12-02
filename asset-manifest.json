@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cyber-labs/static/css/main.e0b63f46.css",
-    "main.js": "/cyber-labs/static/js/main.5b072678.js",
+    "main.css": "/cyber-labs/static/css/main.a61f19ee.css",
+    "main.js": "/cyber-labs/static/js/main.3fc5756f.js",
     "static/js/453.5c927e1f.chunk.js": "/cyber-labs/static/js/453.5c927e1f.chunk.js",
     "index.html": "/cyber-labs/index.html",
-    "main.e0b63f46.css.map": "/cyber-labs/static/css/main.e0b63f46.css.map",
-    "main.5b072678.js.map": "/cyber-labs/static/js/main.5b072678.js.map",
+    "main.a61f19ee.css.map": "/cyber-labs/static/css/main.a61f19ee.css.map",
+    "main.3fc5756f.js.map": "/cyber-labs/static/js/main.3fc5756f.js.map",
     "453.5c927e1f.chunk.js.map": "/cyber-labs/static/js/453.5c927e1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0b63f46.css",
-    "static/js/main.5b072678.js"
+    "static/css/main.a61f19ee.css",
+    "static/js/main.3fc5756f.js"
   ]
 }
