@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cyber-labs/static/css/main.74baa318.css",
-    "main.js": "/cyber-labs/static/js/main.f56f919e.js",
+    "main.js": "/cyber-labs/static/js/main.6079f47e.js",
     "index.html": "/cyber-labs/index.html",
     "main.74baa318.css.map": "/cyber-labs/static/css/main.74baa318.css.map",
-    "main.f56f919e.js.map": "/cyber-labs/static/js/main.f56f919e.js.map"
+    "main.6079f47e.js.map": "/cyber-labs/static/js/main.6079f47e.js.map"
   },
   "entrypoints": [
     "static/css/main.74baa318.css",
-    "static/js/main.f56f919e.js"
+    "static/js/main.6079f47e.js"
   ]
 }
